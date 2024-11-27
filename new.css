@@ -1,0 +1,197 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7f8fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  /* Form Section Styles */
+  .form-section {
+    width: 45%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .form-section:hover {
+    transform: scale(1.02);
+  }
+  
+  h2, h3 {
+    color: #2575fc;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-top: 10px;
+    display: block;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input:focus, textarea:focus {
+    border-color: #2575fc;
+    box-shadow: 0 0 4px rgba(37, 117, 252, 0.5);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  button {
+    padding: 10px 15px;
+    background-color: #2575fc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  button:hover {
+    background-color: #1e60d8;
+    transform: translateY(-2px);
+  }
+  
+  /* Dynamic Input Container */
+  .dynamic-input {
+    margin: 5px 0;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background: #f9f9f9;
+  }
+  
+  /* Skill Chips */
+  .skill-chip {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    background-color: #e0e0e0;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .skill-chip:hover {
+    background-color: #d0d0d0;
+    transform: scale(1.1);
+  }
+  
+  .skill-chip.selected {
+    background-color: #2575fc;
+    color: white;
+  }
+  
+  /* Preview Section Styles */
+  .preview-section {
+    width: 45%;
+    padding: 20px;
+    background: linear-gradient(to bottom, #ffffff, #f4f4f4);
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  #resumePreview {
+    padding: 20px;
+    background: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  #resumePreview ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  #resumePreview ul li {
+    padding-left: 10px;
+    margin: 5px 0;
+  }
+  
+  h4 {
+    color: #333;
+    margin-top: 15px;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 5px;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Media Queries */
+  @media (max-width: 768px) {
+    .container {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .form-section, .preview-section {
+      width: 90%;
+      margin-bottom: 20px;
+    }
+  
+    h2 {
+      font-size: 24px;
+    }
+  
+    h3 {
+      font-size: 20px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    input, textarea, button {
+      font-size: 14px;
+    }
+  
+    button {
+      padding: 8px 10px;
+    }
+  
+    .skill-chip {
+      font-size: 12px;
+      padding: 5px 10px;
+    }
+  }
+  

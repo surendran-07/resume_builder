@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Resume Builder</title>
+  <link rel="stylesheet" href="new.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Form Section -->
+    <div class="form-section">
+      <h2>Create Your Resume</h2>
+      <form id="resumeForm">
+        <!-- Personal Information -->
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name">
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email">
+
+        <label for="phone">Phone Number</label>
+        <input type="text" id="phone" name="phone" placeholder="Enter your phone number">
+
+        <label for="summary">Profile Summary</label>
+        <textarea id="summary" name="summary" placeholder="Enter a short profile summary"></textarea>
+
+        <!-- Education Section -->
+        <h3>Education</h3>
+        <div id="educationContainer"></div>
+        <button type="button" id="addEducation">Add Education</button>
+
+        <!-- Experience Section -->
+        <h3>Experience</h3>
+        <div id="experienceContainer"></div>
+        <button type="button" id="addExperience">Add Experience</button>
+
+        <!-- Project Section -->
+        <h3>Projects</h3>
+        <div id="projectContainer"></div>
+        <button type="button" id="addProject">Add Project</button>
+
+        <!-- Skills Section -->
+        <h3>Skills</h3>
+        <input type="text" id="newSkill" placeholder="Add a custom skill">
+        <button type="button" id="addSkillButton">Add Skill</button>
+
+        <div id="skillsContainer">
+          <span class="skill-chip" data-skill="HTML">HTML</span>
+          <span class="skill-chip" data-skill="CSS">CSS</span>
+          <span class="skill-chip" data-skill="JavaScript">JavaScript</span>
+          <span class="skill-chip" data-skill="React">React</span>
+          <span class="skill-chip" data-skill="Node.js">Node.js</span>
+        </div>
+      </form>
+    </div>
+
+    <!-- Resume Preview Section -->
+    <div class="preview-section">
+      <h2>Resume Preview</h2>
+      <div id="resumePreview">
+        <h3 id="resumeName"></h3>
+        <p id="resumeEmail"></p>
+        <p id="resumePhone"></p>
+        <p id="resumeSummary"></p>
+
+        <h4>Education</h4>
+        <ul id="resumeEducation"></ul>
+
+        <h4>Experience</h4>
+        <ul id="resumeExperience"></ul>
+
+        <h4>Projects</h4>
+        <ul id="resumeProjects"></ul>
+
+        <h4>Skills</h4>
+        <ul id="resumeSkills"></ul>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
